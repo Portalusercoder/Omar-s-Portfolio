@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Noor Transit visual">
+  <rect width="1200" height="900" fill="#060607"/>
+  <path d="M80 720 C 280 720, 320 220, 560 220 S 820 620, 1120 180" fill="none" stroke="#2b2d30" stroke-width="2"/>
+  <circle cx="560" cy="220" r="7" fill="#d8d8da"/>
+  <circle cx="320" cy="520" r="4" fill="#6a6c70"/>
+  <circle cx="820" cy="500" r="4" fill="#6a6c70"/>
+  <circle cx="180" cy="700" r="3" fill="#3a3c40"/>
+</svg>

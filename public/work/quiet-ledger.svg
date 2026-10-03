@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Quiet Ledger visual">
+  <rect width="1200" height="900" fill="#070707"/>
+  <defs>
+    <radialGradient id="g" cx="50%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#1a1c1d"/>
+      <stop offset="100%" stop-color="#070707"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <g stroke="#2a2c2d" stroke-width="1" fill="none">
+    <path d="M180 220h840"/>
+    <path d="M180 340h840"/>
+    <path d="M180 460h840"/>
+    <path d="M180 580h840"/>
+    <path d="M180 700h540"/>
+  </g>
+  <rect x="180" y="250" width="220" height="8" fill="#3a3c3d"/>
+  <rect x="180" y="370" width="360" height="8" fill="#2f3132"/>
+  <rect x="180" y="490" width="160" height="8" fill="#454748"/>
+  <circle cx="920" cy="300" r="90" fill="none" stroke="#3d3f40" stroke-width="1.2"/>
+</svg>

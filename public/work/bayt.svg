@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Bayt visual">
+  <rect width="1200" height="900" fill="#080808"/>
+  <rect x="220" y="210" width="280" height="480" fill="#141414"/>
+  <rect x="520" y="320" width="220" height="370" fill="#1b1b1b"/>
+  <rect x="760" y="160" width="180" height="530" fill="#101010"/>
+  <rect x="250" y="250" width="90" height="140" fill="#0b0b0b"/>
+  <rect x="370" y="250" width="90" height="140" fill="#0b0b0b"/>
+  <rect x="250" y="430" width="90" height="140" fill="#0b0b0b"/>
+  <rect x="370" y="430" width="90" height="140" fill="#0b0b0b"/>
+  <rect x="220" y="210" width="280" height="1" fill="#2c2c2c"/>
+</svg>

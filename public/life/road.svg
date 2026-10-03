@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Night road">
+  <rect width="900" height="1200" fill="#060606"/>
+  <path d="M120 1200 L420 520 L480 520 L780 1200 Z" fill="#101010"/>
+  <path d="M450 520 L430 1200" stroke="#2a2a2a" stroke-width="4" stroke-dasharray="18 22"/>
+  <circle cx="450" cy="480" r="3" fill="#cfcfcf"/>
+</svg>
