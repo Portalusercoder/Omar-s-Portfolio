@@ -4,7 +4,7 @@ import { useState } from "react";
 import { site } from "@/lib/content";
 
 const field =
-  "w-full border-b border-fg bg-transparent py-2 font-serif outline-none placeholder:italic placeholder:text-muted/70 focus:border-fg";
+  "w-full border-b border-fg/40 bg-transparent py-3 font-serif outline-none placeholder:italic placeholder:text-muted/70 focus:border-fg";
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -46,7 +46,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-2" noValidate>
+    <form onSubmit={onSubmit} className="space-y-5" noValidate>
       <label className="block">
         <span className="sr-only">Name</span>
         <input
@@ -89,9 +89,9 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="kicker inline-flex min-h-11 items-center underline decoration-1 underline-offset-4 disabled:opacity-50"
+        className="oval-btn mt-4 disabled:opacity-50"
       >
-        {status === "submitting" ? "Setting type" : "To the editor"}
+        {status === "submitting" ? "Setting type" : "Email me"}
       </button>
     </form>
   );

@@ -7,17 +7,11 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <main className="site-pad flex min-h-0 flex-1 flex-col justify-center">
-      <p className="kicker">The Back Page</p>
-      <h1 className="headline mt-2 text-[clamp(2rem,6vw,4rem)]">Held over.</h1>
-      <p className="mt-4 max-w-md italic text-muted">
-        Notes are paused while this edition stays on one sheet.
-      </p>
-      <Link
-        href="/work"
-        className="kicker mt-6 inline-flex min-h-11 w-fit items-center underline underline-offset-4"
-      >
-        The Portfolio
+    <main className="site-pad flex min-h-[80svh] flex-col justify-center ">
+      <p className="kicker">The back page</p>
+      <h1 className="headline mt-4 text-[clamp(2.6rem,8vw,6rem)]">Held over.</h1>
+      <Link href="/work" className="oval-btn mt-8 w-fit">
+        The work
       </Link>
     </main>
   );

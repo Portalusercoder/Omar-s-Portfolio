@@ -76,7 +76,7 @@ export function SiteFooter() {
             <p className="mt-3 text-sm text-muted">Noted. I’ll write back.</p>
           ) : null}
           <a
-            href={`mailto:${site.email}?subject=Coffee%20in%20Dammam`}
+            href={`mailto:${site.email}?subject=Coffee%20in%20Khobar`}
             className="mt-8 inline-flex min-h-11 items-center text-fg underline decoration-transparent underline-offset-4 hover:decoration-fg"
           >
             {site.coffee}

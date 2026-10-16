@@ -16,7 +16,7 @@ export function Masthead() {
   return (
     <header className="site-pad shrink-0 pt-1.5">
       <div className="flex items-center justify-between gap-4 text-[0.62rem] uppercase tracking-[0.16em] sm:text-[0.68rem]">
-        <p>Dammam, Saudi Arabia</p>
+        <p>Khobar, Saudi Arabia</p>
         <p className="hidden sm:block">Saturday, October 3, 2026</p>
         <p>Vol. I · No. 1</p>
       </div>
@@ -25,7 +25,7 @@ export function Masthead() {
         href="/"
         className="headline mt-0.5 block text-center text-[clamp(2.1rem,7.4vw,5.8rem)]"
       >
-        The Khuddose
+        Omar
       </Link>
       <p className="mt-0.5 hidden text-center text-[0.72rem] italic text-muted sm:block">
         A journal of interface, type, and the quiet work people keep using

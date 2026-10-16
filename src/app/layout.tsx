@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Newsreader, Playfair_Display } from "next/font/google";
-import { Masthead } from "@/components/nav/Masthead";
+import { Newsreader, Outfit, Playfair_Display } from "next/font/google";
+import { StudioShell } from "@/components/studio/StudioShell";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -15,40 +15,45 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://omarkhuddose.com"),
   title: {
-    default: "The Khuddose — Omar Khuddose",
-    template: "%s — The Khuddose",
+    default: "Omar",
+    template: "%s — Omar",
   },
   description:
-    "Omar Khuddose. UI/UX designer based in Dammam, Saudi Arabia. Designing for everyone.",
+    "Omar. UI/UX designer based in Khobar, Saudi Arabia. Designing for everyone.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#efe6d2",
-  colorScheme: "light",
+  themeColor: "#000000",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${newsreader.variable} bg-bg antialiased`}
+      className={`${playfair.variable} ${newsreader.variable} ${outfit.variable} bg-[#000000] antialiased`}
     >
-      <body className="h-full overflow-hidden bg-bg font-sans text-fg">
+      <body className="studio bg-[#000000] font-sans text-[#ffffff]">
         <a
           href="#content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:bg-bg focus:px-4 focus:py-2"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[90] focus:bg-[#000000] focus:px-4 focus:py-2"
         >
           Skip to content
         </a>
-        <div className="flex h-[100svh] flex-col overflow-hidden shadow-[inset_0_0_0_1px_var(--fg)]">
-          <Masthead />
-          <div id="content" className="flex min-h-0 flex-1 flex-col">
+        <StudioShell>
+          <div id="content" className="flex flex-1 flex-col">
             {children}
           </div>
-        </div>
+        </StudioShell>
       </body>
     </html>
   );

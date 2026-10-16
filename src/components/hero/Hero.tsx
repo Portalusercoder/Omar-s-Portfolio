@@ -22,7 +22,7 @@ export function Hero() {
           >
             <Image
               src="/omar-hero-v2.jpg"
-              alt="Omar Khuddose in a noir city of yellow-lit panels, with a figure on a distant rooftop"
+              alt="Omar in a noir city of yellow-lit panels, with a figure on a distant rooftop"
               fill
               priority
               sizes="100vw"

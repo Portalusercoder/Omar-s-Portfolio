@@ -1,5 +1,5 @@
 export const site = {
-  name: "Omar Khuddose",
+  name: "Omar",
   wordmark: "Omar",
   title: "UI/UX designer",
   role: "just another UI/UX designer",
@@ -8,8 +8,8 @@ export const site = {
   heroRole: ["UI/UX product designer"],
   heroDescription:
     "UI/UX designer crafting products, systems, and the quiet details people keep using.",
-  city: "Dammam, Saudi Arabia",
-  based: "Based in Dammam, Saudi Arabia",
+  city: "Khobar, Saudi Arabia",
+  based: "Based in Khobar, Saudi Arabia",
   designing: "Designing for everyone",
   email: "hello@omarkhuddose.com",
   coffee: "Drop by for a coffee",
@@ -31,7 +31,7 @@ export const site = {
     photos: [
       {
         src: "/omar.jpg",
-        alt: "Omar Khuddose in profile against black",
+        alt: "Omar in profile against black",
         offset: "mt-0",
       },
       {
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     problem:
       "A savings product that explained itself in charts nobody wanted to read. People opened it, blinked, and left.",
     process: [
-      "Sat with first-time savers in Dammam and mapped the exact moment trust broke.",
+      "Sat with first-time savers in Khobar and mapped the exact moment trust broke.",
       "Threw out the dashboard-first model. Built around one next action.",
       "Prototyped the empty state as the real product, not a leftover.",
     ],
@@ -308,7 +308,7 @@ export const posts = [
     date: "March 2026",
     excerpt:
       "Arabic is not a toggle. If the product is bilingual, the thinking has to be too.",
-    body: "Most bilingual products are English products with a mirror. The grid snaps, the type shrinks, and someone calls it localization. I start the other way. I write the longest Arabic string first, then I see what English is allowed to do. The interface should feel at home in Dammam before it feels clever in a deck.",
+    body: "Most bilingual products are English products with a mirror. The grid snaps, the type shrinks, and someone calls it localization. I start the other way. I write the longest Arabic string first, then I see what English is allowed to do. The interface should feel at home in Khobar before it feels clever in a deck.",
   },
   {
     slug: "screens-are-not-the-work",
