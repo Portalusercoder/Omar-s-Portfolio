@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { site } from "@/lib/content";
+import { openMail } from "@/lib/utils";
 
 const field =
   "w-full border-b border-fg/40 bg-transparent py-3 font-serif outline-none placeholder:italic placeholder:text-muted/70 focus:border-fg";
@@ -23,18 +24,12 @@ export function ContactForm() {
     }
 
     setError("");
-    setStatus("submitting");
-    try {
-      const response = await fetch("/api/inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, details }),
-      });
-      if (!response.ok) throw new Error("failed");
-      setStatus("success");
-    } catch {
-      setStatus("error");
-    }
+    openMail({
+      to: site.email,
+      subject: `Note from ${name.trim()}`,
+      body: `${details.trim()}\n\nReply to: ${email.trim()}`,
+    });
+    setStatus("success");
   };
 
   if (status === "success") {

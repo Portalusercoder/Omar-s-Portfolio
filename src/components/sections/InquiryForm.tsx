@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { formOptions } from "@/lib/content";
+import { formOptions, site } from "@/lib/content";
+import { openMail } from "@/lib/utils";
 import { Reveal } from "@/components/ui/Reveal";
 import { PillButton } from "@/components/ui/PillButton";
 import { cn } from "@/lib/utils";
@@ -93,18 +94,23 @@ export function InquiryForm({ heading = "Tell me what you need" }: { heading?: s
     event.preventDefault();
     if (!validate()) return;
 
-    setStatus("submitting");
-    try {
-      const response = await fetch("/api/inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (!response.ok) throw new Error("failed");
-      setStatus("success");
-    } catch {
-      setStatus("error");
-    }
+    const body = [
+      values.company && `Company: ${values.company}`,
+      values.services.length && `Services: ${values.services.join(", ")}`,
+      values.budget && `Budget: ${values.budget}`,
+      values.delivery && `Delivery: ${values.delivery}`,
+      values.source && `Source: ${values.source}`,
+      values.details,
+      `Reply to: ${values.email}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+    openMail({
+      to: site.email,
+      subject: `Inquiry from ${values.name.trim()}`,
+      body,
+    });
+    setStatus("success");
   };
 
   if (status === "success") {

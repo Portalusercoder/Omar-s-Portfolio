@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState, type FormEvent, type ReactNode } from "react";
 import { projects, site } from "@/lib/content";
+import { openMail } from "@/lib/utils";
 
 const label = "text-[11px] uppercase tracking-[0.16em] text-[#ffffff]/70";
 const strong = "text-[#ffffff]";
@@ -165,22 +166,17 @@ function StudioInquiry() {
       company.trim() && `Company: ${company.trim()}`,
       projectType.trim() && `Project type: ${projectType.trim()}`,
       message.trim(),
+      `Reply to: ${email.trim()}`,
     ]
       .filter(Boolean)
       .join("\n");
-    try {
-      const response = await fetch("/api/inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), details }),
-      });
-      if (!response.ok) throw new Error("failed");
-      setSent(true);
-    } catch {
-      setError("Couldn’t send that. Use the email instead.");
-    } finally {
-      setSending(false);
-    }
+    openMail({
+      to: site.email,
+      subject: `Inquiry from ${name.trim()}`,
+      body: details,
+    });
+    setSent(true);
+    setSending(false);
   }
 
   if (sent) {
