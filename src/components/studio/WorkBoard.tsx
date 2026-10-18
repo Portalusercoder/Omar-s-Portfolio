@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Project } from "@/lib/content";
+import { publicPath } from "@/lib/utils";
 
 const FILTERS = ["All work", "Product", "Brand", "Web", "Motion"] as const;
 
@@ -67,7 +68,7 @@ export function WorkBoard({ projects }: { projects: Project[] }) {
                 <Link href={`/work/${project.slug}`} className="group block">
                   <div className="relative aspect-[16/10] overflow-hidden bg-black/20">
                     <Image
-                      src={project.cover}
+                      src={publicPath(project.cover)}
                       alt=""
                       fill
                       sizes="(min-width: 1280px) 28vw, (min-width: 640px) 45vw, 90vw"

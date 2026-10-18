@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "@/lib/content";
+import { publicPath } from "@/lib/utils";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -33,7 +34,7 @@ export default async function CaseStudyPage({ params }: Props) {
       </Link>
       <div className="mt-4 grid gap-8 lg:grid-cols-[1.35fr_0.8fr] lg:items-start">
         <div className="relative aspect-[16/10] overflow-hidden bg-black/20">
-          <Image src={project.cover} alt="" fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover" priority />
+          <Image src={publicPath(project.cover)} alt="" fill sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover" priority />
         </div>
         <div>
           <p className="text-[11px] uppercase tracking-[0.16em] text-[#ffffff]/50">{project.year}</p>
@@ -62,7 +63,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <ul className="mt-8 grid gap-4 sm:grid-cols-2">
           {project.screens.slice(1).map((src) => (
             <li key={src} className="relative aspect-[16/10] overflow-hidden bg-black/20">
-              <Image src={src} alt="" fill sizes="50vw" className="object-cover" />
+              <Image src={publicPath(src)} alt="" fill sizes="50vw" className="object-cover" />
             </li>
           ))}
         </ul>

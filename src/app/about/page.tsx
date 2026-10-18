@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { services, site, testimonials } from "@/lib/content";
+import { publicPath } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "About",
@@ -25,7 +26,7 @@ export default function AboutPage() {
       <section className="site-pad grid items-end gap-10 pb-16 md:grid-cols-2 md:gap-16">
         <div className="relative aspect-[4/5] overflow-hidden bg-fg/5">
           <Image
-            src="/omar.jpg"
+            src={publicPath("/omar.jpg")}
             alt="Omar in profile"
             fill
             priority
